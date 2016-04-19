@@ -53,6 +53,9 @@ public class CallableControllerTests extends AbstractContextControllerTests {
 			.andExpect(forwardedUrl("/WEB-INF/views/views/html.jsp"))
 			.andExpect(model().attribute("foo", "bar"))
 			.andExpect(model().attribute("fruit", "apple"));
+			
+			
+			org.junit.Assert.fail();
 	}
 
 	@Test
