@@ -43,11 +43,6 @@ public class CallableControllerTests extends AbstractContextControllerTests {
 
 	@Test
 	public void view() throws Exception {
-		
-		
-		This doesn't compile!!!
-
-
 		MvcResult mvcResult = this.mockMvc.perform(get("/async/callable/view"))
 			.andExpect(request().asyncStarted())
 			.andExpect(request().asyncResult("views/html"))
@@ -58,9 +53,6 @@ public class CallableControllerTests extends AbstractContextControllerTests {
 			.andExpect(forwardedUrl("/WEB-INF/views/views/html.jsp"))
 			.andExpect(model().attribute("foo", "bar"))
 			.andExpect(model().attribute("fruit", "apple"));
-			
-			
-			org.junit.Assert.fail();
 	}
 
 	@Test
